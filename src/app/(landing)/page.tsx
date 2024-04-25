@@ -23,7 +23,7 @@ export default function Home() {
             Plura
           </h1>
         </div>
-        <div className="flex justify-center items-center relative md:mt-[-70px]">
+        <div className="flex justify-center items-center relative">
           <Image
             src={"/assets/preview.png"}
             alt="banner"
