@@ -1,5 +1,8 @@
+"use client";
+
 import { ModeToggle } from "@/components/global/mode-toggle";
-import { UserButton } from "@clerk/nextjs";
+import { Spinner } from "@/components/global/spinner";
+import { UserButton, useAuth } from "@clerk/nextjs";
 import { User } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +13,7 @@ type Props = {
 };
 
 const Navigation = ({ user }: Props) => {
+  const { isSignedIn, isLoaded, userId } = useAuth();
   return (
     <div className="p-4 flex items-center justify-between relative">
       <aside className="flex items-center gap-2">
@@ -30,12 +34,19 @@ const Navigation = ({ user }: Props) => {
         </ul>
       </nav>
       <aside className="flex gap-2 items-center">
-        <Link
-          href="/agency"
-          className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80"
-        >
-          Login
-        </Link>
+        {!isLoaded && (
+          <div className="w-full flex items-center justify-center">
+            <Spinner size="lg" />
+          </div>
+        )}
+        {isLoaded && (
+          <Link
+            href="/agency"
+            className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80"
+          >
+            {isSignedIn ? "Dashboard" : "Login"}
+          </Link>
+        )}
         <UserButton />
         <ModeToggle />
       </aside>

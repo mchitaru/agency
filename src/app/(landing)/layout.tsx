@@ -1,6 +1,4 @@
 import Navigation from "@/components/landing/navigation";
-import { ClerkProvider } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
 import React from "react";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
