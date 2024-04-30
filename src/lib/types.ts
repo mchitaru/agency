@@ -19,8 +19,11 @@ import {
 } from "./queries";
 import { db } from "./db";
 import { z } from "zod";
+import { TagColors } from "./constants";
 
 // import Stripe from "stripe";
+
+export type TagColor = (typeof TagColors)[number];
 
 export type NotificationWithUser =
   | ({

@@ -664,8 +664,8 @@ export const upsertLane = async (lane: Prisma.LaneUncheckedCreateInput) => {
 };
 
 export const deleteLane = async (laneId: string) => {
-  const resposne = await db.lane.delete({ where: { id: laneId } });
-  return resposne;
+  const response = await db.lane.delete({ where: { id: laneId } });
+  return response;
 };
 
 export const getTicketsWithTags = async (pipelineId: string) => {

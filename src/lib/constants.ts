@@ -230,3 +230,5 @@ export const defaultStyles: React.CSSProperties = {
   textAlign: "left",
   opacity: "100%",
 };
+
+export const TagColors = ["BLUE", "ORANGE", "ROSE", "PURPLE", "GREEN"] as const;
