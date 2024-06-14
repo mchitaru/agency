@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/button";
 
 interface FunnelProductsTableProps {
   defaultData: Funnel;
-  products: Stripe.Product[];
+  products: /*Stripe.Product[]*/ any[];
 }
 
 const FunnelProductsTable: React.FC<FunnelProductsTableProps> = ({
@@ -49,7 +49,7 @@ const FunnelProductsTable: React.FC<FunnelProductsTableProps> = ({
     router.refresh();
   };
 
-  const handleAddProduct = async (product: Stripe.Product) => {
+  const handleAddProduct = async (product: /*Stripe.Product*/ any) => {
     const productIdExists = liveProducts.find(
       //@ts-ignore
       (prod) => prod.productId === product.default_price.id

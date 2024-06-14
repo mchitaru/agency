@@ -46,9 +46,9 @@ const LaunchpadPage = async ({ params, searchParams }: Props) => {
       <div className="w-full h-full max-w-[800px]">
         <Card className="border-none">
           <CardHeader>
-            <CardTitle>Let's get started!</CardTitle>
+            <CardTitle>{"Let's get started!"}</CardTitle>
             <CardDescription>
-              Follow the steps bellow to get your account setup.
+              {"Follow the steps bellow to get your account setup."}
             </CardDescription>
             <CardContent className="flex flex-col gap-4">
               <div className="flex justify-between items-center w-full border p-4 rounded-lg gap-2">

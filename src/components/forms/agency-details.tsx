@@ -363,8 +363,8 @@ const AgencyDetails = ({ data }: Props) => {
                 <div className="flex flex-col gap-2">
                   <FormLabel>Create A Goal</FormLabel>
                   <FormDescription>
-                    ✨ Create a goal for your agency. As your business grows
-                    your goals grow too so don't forget to set the bar higher!
+                    {`✨ Create a goal for your agency. As your business grows
+                    your goals grow too so don't forget to set the bar higher!`}
                   </FormDescription>
                   <NumberInput
                     defaultValue={data?.goal}
